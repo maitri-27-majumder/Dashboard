@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonCard = () => {
   return (
-    <div>
+    <div className="button__wrapper">
       <div>New</div>
       <div>No show</div>
       <div>Target</div>

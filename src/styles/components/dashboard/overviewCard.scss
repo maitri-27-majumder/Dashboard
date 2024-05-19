@@ -1,0 +1,84 @@
+.overview__wrapper {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  .overview__item {
+    border-radius: 6px;
+    border: 1px solid #374151;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    > div {
+      &:first-child {
+        border-radius: 6px;
+        height: 55px;
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &.item-newleads {
+      > div {
+        &:first-child {
+          background-color: #d9d7f4;
+        }
+      }
+    }
+    &.item-email {
+      > div {
+        &:first-child {
+          background-color: #cffafe;
+        }
+      }
+    }
+    &.item-proposal {
+      > div {
+        &:first-child {
+          background-color: #dcfce7;
+        }
+      }
+    }
+    &.item-appointment {
+      > div {
+        &:first-child {
+          background-color: #fef3c7;
+        }
+      }
+    }
+    .overview__item-data {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        > div {
+            display: flex;
+            align-items: end;
+            gap: 6px;
+            font-size: 14px;
+            color: #9CA3AF;
+            &:first-child {
+                >div {
+                    &:first-child {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: #F3F4F6;
+                    }
+                    &:last-child {
+                        font-weight: 600;
+                    }
+                }
+            }
+            .overview__item-percent {
+                font-weight: 600;
+                &.green {
+                    color: #10B981;
+                }
+                &.red {
+                    color: #EF4444;
+                }
+            }
+        }
+    }
+  }
+}

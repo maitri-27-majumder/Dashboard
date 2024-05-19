@@ -32,7 +32,7 @@ const Sidebar = () => {
         <nav className="nav__container">
           <div className="nav__title">
             <img src={siteLogo} />
-            YOUR SITE
+            <span>YOUR SITE</span>
           </div>
 
           <div className="nav__menu" id="nav-menu">

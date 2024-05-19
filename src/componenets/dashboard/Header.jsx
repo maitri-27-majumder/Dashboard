@@ -5,25 +5,25 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import React from "react";
-import UsaIcon from "../../assets/header/UsaIcon";
+import USAIcon from "../../assets/dashboard/USAIcon.png";
 import avatar from "../../assets/avatar/caroline.png";
 
 const Header = () => {
   return (
-    <div>
+    <div className="header__wrapper">
       <div className="header__left-item">
         <AlignLeftOutlined />
         <SearchOutlined />
       </div>
 
       <div className="header__right-item">
-        <UsaIcon />
-        <div>
+        <img src={USAIcon} />
+        <div className="header__notification">
           <BellOutlined />
           <div></div>
         </div>
         <SettingOutlined />
-        <div>
+        <div className="header__avatar-wrapper">
           <img className="header__avatar" src={avatar} />
           <div className="header__avatar-details">
             <div>Admin</div>

@@ -1,0 +1,35 @@
+.header__wrapper {
+    color: #9CA3AF;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #374151;
+    .header__left-item {
+        display: flex;
+        gap: 20px;
+    }
+    .header__right-item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .header__avatar-wrapper {
+            display: flex;
+            gap: 6px;
+            img {
+                clip-path: circle(15px at center);
+            }
+            .header__avatar-details {
+                > div {
+                    &:first-child {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &:last-child {
+                     font-size: 14px;
+                     font-weight: 600;   
+                    }
+                }
+            }
+        }
+    }
+}

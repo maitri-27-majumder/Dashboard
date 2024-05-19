@@ -1,0 +1,13 @@
+.button__wrapper {
+    display: flex;
+    margin: 16px;
+    justify-content: space-between;
+    color: #FFFFFF;
+    > div {
+        padding: 12px 4vw;
+        color: 20px;
+        font-weight: 600;
+        background-color: #374151;
+        border-radius: 6px;
+    }
+}

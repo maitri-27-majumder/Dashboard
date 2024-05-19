@@ -3,19 +3,19 @@ import siteLogo from "../../assets/header/SiteLogo.png";
 
 const Header = () => {
   return (
-    <div>
-      <div className="mainheader__left">
+    <div className="landing__header">
+      <div className="landing__header-left">
         <img className="sitelogo" src={siteLogo} />
         <div>Your Site</div>
       </div>
 
-      <div className="mainheader__middle">
+      <div className="landing__header-middle">
         <div>About</div>
         <div>How it works</div>
         <div>Pricing</div>
       </div>
-      <div className="mainheader__right">
-        <button>Login/Signup</button>
+      <div className="landing__header-right landing__btn">
+        <div>Login / Signup</div>
       </div>
     </div>
   );

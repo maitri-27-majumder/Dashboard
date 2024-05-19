@@ -1,0 +1,46 @@
+.landing__header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 35.5px 0px #7c7c7c1a;
+  padding: 20px 36px;
+  font-family: "Poppins", sans-serif;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing__header-left {
+    gap: 6px;
+    font-size: 36.7px;
+    font-weight: 800;
+    img {
+      width: 44.73px;
+      height: 35.61px;
+    }
+    div {
+      color: #891cf1;
+      background-image: -webkit-linear-gradient(0deg, #891cf1 24%, #1eccff 61%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .landing__header-middle {
+    gap: 36px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+.landing__btn {
+  text-transform: uppercase;
+  background-color: #ff4d00;
+  border-radius: 32px;
+  padding: 8px 32px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    background-color: #e74702;
+  }
+}

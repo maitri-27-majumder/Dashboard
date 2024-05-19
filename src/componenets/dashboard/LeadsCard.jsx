@@ -17,7 +17,7 @@ const entries = [
   {
     avatar: <img src={johnImg} />,
     name: "John Doe",
-    status: "Active",
+    status: "Sold",
     email: "john.doe@example.com",
     createdTime: "03/15/2023 08:30",
     assignee: "Nancy Wright",
@@ -26,7 +26,7 @@ const entries = [
   {
     avatar: <img src={janeImg} />,
     name: "Jane Smith",
-    status: "Pending",
+    status: "Sold",
     email: "jane_smith@outlook.com",
     createdTime: "07/22/2022 14:45",
     assignee: "Mike Johnson",
@@ -35,7 +35,7 @@ const entries = [
   {
     avatar: <img src={emilyImg} />,
     name: "Emily Clark",
-    status: "Active",
+    status: "Not Interested",
     email: "emily_clark@gmail.com",
     createdTime: "05/30/2023 17:25",
     assignee: "David Martinez",
@@ -43,7 +43,7 @@ const entries = [
   {
     avatar: <img src={williumImg} />,
     name: "Willium Taylor",
-    status: "New",
+    status: "In Progress",
     email: "william.t@domain.com",
     createdTime: "01/17/2022 11:05",
     assignee: "Rachel Lee",
@@ -51,25 +51,35 @@ const entries = [
 ];
 const LeadsCard = () => {
   return (
-    <div>
-      <div>
+    <div className="leads__wrapper">
+      <div className="leads__header">
         <div>Leads</div>
         <div>View All Leads</div>
       </div>
-      <div>
-        <div>
+      <div className="leads__table">
+        <div className="leads__table-header">
           <div>NAME</div>
           <div>STATUS</div>
           <div>EMAIL</div>
           <div>CREATED TIME</div>
           <div>ASSIGNEE</div>
         </div>
-        <div>
+        <div className="leads__entries">
           {entries.map((item, index) => (
-            <div>
-              <div>{item.avatar}</div>
-              <div>{item.name}</div>
-              <div>{item.status}</div>
+            <div key={`leads-entries-${index}`} className="leads__entries-item">
+              <div>
+                <div>{item.avatar}</div>
+                <div>{item.name}</div>
+              </div>
+              <div>
+                <span
+                  className={`leads__entries-item-status ${item.status
+                    .replace(" ", "")
+                    .toLowerCase()}`}
+                >
+                  {item.status}
+                </span>
+              </div>
               <div>{item.email}</div>
               <div>{item.createdTime}</div>
               <div>{item.assignee}</div>

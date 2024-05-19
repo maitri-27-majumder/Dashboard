@@ -1,1 +1,20 @@
+@import "./base.scss";
 @import "./pages/dashboard.scss";
+@import "./components/dashboard/sidebar.scss";
+@import "./components/dashboard/header.scss";
+@import "./components/dashboard/overviewCard.scss";
+@import "./components/dashboard/chartCard.scss";
+@import "./components/dashboard/progressCard.scss";
+@import "./components/dashboard/buttonCard.scss";
+@import "./components/dashboard/leadsCard.scss";
+@import "./components/dashboard/footer.scss";
+
+//landing
+
+@import "./pages/landing.scss";
+@import "./components/landingPage/header.scss";
+@import "./components/landingPage/body.scss";
+
+//home
+
+@import "./pages/home.scss";

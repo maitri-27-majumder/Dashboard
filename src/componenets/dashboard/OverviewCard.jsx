@@ -33,22 +33,37 @@ const cardItem = [
   },
 ];
 const OverviewCard = () => {
-  return cardItem.map((item, index) => (
-    <div>
-      <div>{item.icon}</div>
-      <div>
-        <div>
-          <div>{item.number}</div>
-          <div>{item.name}</div>
+  return (
+    <div className="overview__wrapper">
+      {cardItem.map((item, index) => (
+        <div
+          className={`overview__item item-${item.name
+            .replace(" ", "")
+            .toLowerCase()}`}
+          key={`overview-card-${index}`}
+        >
+          <div>{item.icon}</div>
+          <div className="overview__item-data">
+            <div>
+              <div>{item.number}</div>
+              <div>{item.name}</div>
+            </div>
+            <div>
+              {Number(item.percentage) > 0 ? <GrowthIcon /> : <StrokeIcon />}
+              <div
+                className={`overview__item-percent ${
+                  Number(item.percentage) > 0 ? "green" : "red"
+                }`}
+              >
+                {item.percentage}
+              </div>
+              <div>this month</div>
+            </div>
+          </div>
         </div>
-        <div>
-          {Number(item.percentage) > 0 ? <GrowthIcon /> : <StrokeIcon />}
-          <div>{item.percentage}</div>
-          <div>this month</div>
-        </div>
-      </div>
+      ))}
     </div>
-  ));
+  );
 };
 
 export default OverviewCard;

@@ -40,7 +40,6 @@ const ChartCard = () => {
       },
       options: {
         plugins: {
-          responsive: true,
           legend: {
             display: false,
           },
@@ -58,7 +57,6 @@ const ChartCard = () => {
 
   return (
     <div className="graph__container">
-      <div className="graph__container-head">Population in US</div>
       <canvas id="graph-bar"></canvas>
     </div>
   );
