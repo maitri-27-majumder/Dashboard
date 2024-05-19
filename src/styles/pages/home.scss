@@ -72,18 +72,18 @@
     .home__content-img {
       position: relative;
       > img {
-        width: 32vh;
-        height: 55vh;
+        width: 320px;
+        height: 530px;
       }
       .home__content-img-form {
         position: absolute;
-        top: 6vh;
-        left: 6vh;
+        top: 70px;
+        left: 65px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 20vh;
+        // width: 20vh;
         gap: 20px;
         > div {
             text-align: center;
