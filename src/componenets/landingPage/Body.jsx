@@ -1,5 +1,5 @@
 import React from "react";
-import robotImg from "../../assets/landingPage/robotIcon.png";
+import robotImg from "../../assets/landingPage/RobotIcon.png";
 import MeetingIcon from "../../assets/landingPage/MeetingIcon";
 
 const Body = () => {
