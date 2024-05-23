@@ -28,3 +28,9 @@
     }
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .dashboard__charts {
+    flex-direction: column;
+  }
+}

@@ -1,18 +1,30 @@
 import {
-  AlignLeftOutlined,
   BellOutlined,
+  MenuOutlined,
   SearchOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import USAIcon from "../../assets/dashboard/USAIcon.png";
 import avatar from "../../assets/avatar/caroline.png";
 
-const Header = () => {
+const Header = ({ setIsCollapsed }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+     window.addEventListener("resize", handleResizeWindow);
+     return () => {
+       window.removeEventListener("resize", handleResizeWindow);
+     };
+   }, []);
+
   return (
     <div className="header__wrapper">
       <div className="header__left-item">
-        <AlignLeftOutlined />
+        {width <= 1280 && (
+          <MenuOutlined onClick={() => setIsCollapsed(false)} />
+        )}
         <SearchOutlined />
       </div>
 

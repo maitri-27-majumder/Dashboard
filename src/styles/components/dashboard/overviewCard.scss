@@ -82,3 +82,9 @@
     }
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .overview__wrapper {
+    flex-direction: column;
+  }
+}

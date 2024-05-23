@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../componenets/dashboard/Sidebar";
 import Header from "../componenets/dashboard/Header";
 import OverviewCard from "../componenets/dashboard/OverviewCard";
@@ -9,13 +9,14 @@ import ButtonCard from "../componenets/dashboard/ButtonCard";
 import LeadsCard from "../componenets/dashboard/LeadsCard";
 import Footer from "../componenets/dashboard/Footer";
 
-
 const Dashboard = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
   return (
     <div className="dashboard__wrapper">
-      <Sidebar />
+      <Sidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
       <div className="dashboard__content">
-        <Header />
+        <Header setIsCollapsed={setIsCollapsed} />
         <OverviewCard />
         <div className="dashboard__charts">
           <ChartCard />

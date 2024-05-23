@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 import ProjectIcon from "../../assets/dashboard/ProjectIcon";
 import CRMIcon from "../../assets/dashboard/CRMIcon";
@@ -9,7 +8,7 @@ import KnowledgeIcon from "../../assets/dashboard/KnowledgeIcon";
 import AccountIcon from "../../assets/dashboard/AccountIcon";
 import WelcomeIcon from "../../assets/dashboard/WelcomeIcon";
 import AccessIcon from "../../assets/dashboard/AccessIcon";
-import { DownOutlined } from "@ant-design/icons";
+import { DownOutlined, LeftOutlined } from "@ant-design/icons";
 import siteLogo from "../../assets/header/SiteLogo.png";
 
 const appsList = [
@@ -25,14 +24,31 @@ const pagesList = [
   { icon: <WelcomeIcon />, name: "Welcome" },
   { icon: <AccessIcon />, name: "Access Denied" },
 ];
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+     window.addEventListener("resize", handleResizeWindow);
+     return () => {
+       window.removeEventListener("resize", handleResizeWindow);
+     };
+   }, []);
+
   return (
     <>
-      <div className="nav__wrapper">
+      <div
+        className={`nav__wrapper ${
+          width <= 1280 && isCollapsed ? "nav__hidden" : ""
+        }`}
+      >
         <nav className="nav__container">
           <div className="nav__title">
             <img src={siteLogo} />
             <span>YOUR SITE</span>
+            {width <= 1280 && <div className="nav__collapse" onClick={() => setIsCollapsed(true)}>
+              <LeftOutlined />
+            </div>}
           </div>
 
           <div className="nav__menu" id="nav-menu">

@@ -20,14 +20,15 @@
   }
   .leads__table {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
     margin: 12px 0;
+    overflow-x: auto;
     .leads__table-header,
     .leads__entries-item {
       grid-column-start: 1;
       grid-column-end: 6;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5, minmax(200px, 1fr));
     }
     .leads__entries {
       grid-column-start: 1;

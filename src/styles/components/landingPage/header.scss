@@ -1,6 +1,7 @@
 .landing__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0px 10px 35.5px 0px #7c7c7c1a;
   padding: 20px 36px;
   font-family: "Poppins", sans-serif;
@@ -31,6 +32,9 @@
     font-weight: 500;
     font-size: 18px;
   }
+  .landing__dropdown {
+    display: none;
+  }
 }
 .landing__btn {
   text-transform: uppercase;
@@ -42,5 +46,34 @@
   cursor: pointer;
   &:hover {
     background-color: #e74702;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .landing__header {
+    .landing__dropdown {
+      display: block;
+    }
+    .landing__header-middle {
+      display: none;
+    }
+    .landing__btn {
+      display: none;
+    }
+  }
+  .landing__dropdown-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-weight: 600;
+    }
   }
 }

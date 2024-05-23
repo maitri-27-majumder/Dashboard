@@ -15,7 +15,7 @@
     align-items: center;
     position: relative;
     min-width: 750px;
-      min-height: 750px;
+    min-height: 750px;
     .landing__body-appointment {
       position: absolute;
       right: -40px;
@@ -55,12 +55,22 @@
           font-weight: 800;
         }
         > span {
-            color: #FF4D00;
+          color: #ff4d00;
         }
       }
       a {
         text-decoration: underline !important;
-        color: #FF4D00;
+        color: #ff4d00;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .landing__body-wrapper {
+    .landing__body-content {
+      .landing__body-appointment {
+        right: 30% !important;
       }
     }
   }
